@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import "tailwindcss";
+
+::-webkit-scrollbar{
+  width: 8px;
+  position: fixed;
+  transition: opacity 0.3s;
+}
+html {
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}

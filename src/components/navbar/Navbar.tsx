@@ -32,10 +32,11 @@ const navItems = [
 const Navbar = () => {
   useGSAP(() => {
     gsap.fromTo("#navbar", {y: -200, opacity: 0}, {y: 0, opacity: "100%", duration: 1.5,});
+    gsap.fromTo(".nav-item", {y: 100, opacity: 0}, {y: 0, opacity: "100%",delay: 0.5, duration: 1.5, stagger: 0.2});
   }, []);
 
   return (
-    <header id="navbar" className="fixed w-full z-100">
+    <header id="navbar" className="fixed w-full z-100 overflow-hidden">
       <nav className="bg-text-primary w-[85%] mx-auto py-4 px-10 rounded-b-2xl">
         <div className="flex justify-between items-center">
           {/* Logo section */}
@@ -48,7 +49,7 @@ const Navbar = () => {
           <div>
             <ul className="flex items-center text-base font-semibold">
               {navItems.map((item) => (
-                <li className={`px-5 py-1 rounded-full ${(item.id === 'home') && "bg-deepTeal text-white"}`}>
+                <li className={`nav-item px-5 py-1 rounded-full ${(item.id === 'home') && "bg-deepTeal text-white"}`}>
                   <a href={`#${item.id}`}>{item.navItem}</a>
                 </li>
               ))}

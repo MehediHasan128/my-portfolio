@@ -28,7 +28,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <section className="relative bg-radial-[at_50%_55%] from-[#4f5764] via-bg-secondary to-bg-primary to-100% h-screen overflow-hidden">
+    <section id="home" className="relative bg-radial-[at_50%_55%] from-[#4f5764] via-bg-secondary to-bg-primary to-100% h-screen overflow-hidden">
       <div>
         {/* My image */}
         <div

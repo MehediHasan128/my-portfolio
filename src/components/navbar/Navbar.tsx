@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import logo from "../../assets/logo/navLogo.png";
 import gsap from "gsap";
+import { useEffect, useState } from "react";
 
 const navItems = [
   {
@@ -30,6 +31,30 @@ const navItems = [
 ];
 
 const Navbar = () => {
+
+  const [activeSection, setActiveSection] = useState<string>('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section');
+      let current = 'home';
+
+      sections.forEach((section) => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+
+        if(window.scrollY >= top - height / 3){
+          current = section.getAttribute('id') || 'home'
+        }
+      });
+
+      setActiveSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   useGSAP(() => {
     gsap.fromTo("#navbar", {y: -200, opacity: 0}, {y: 0, opacity: "100%", duration: 1.5,});
     gsap.fromTo(".nav-item", {y: 100, opacity: 0}, {y: 0, opacity: "100%",delay: 0.5, duration: 1.5, stagger: 0.2});
@@ -49,7 +74,7 @@ const Navbar = () => {
           <div>
             <ul className="flex items-center text-base font-semibold">
               {navItems.map((item) => (
-                <li className={`nav-item px-5 py-1 rounded-full ${(item.id === 'home') && "bg-deepTeal text-white"}`}>
+                <li className={`nav-item px-5 py-1 rounded-full transition-colors duration-500 ${(activeSection === item.id) && "bg-deepTeal text-white"}`}>
                   <a href={`#${item.id}`}>{item.navItem}</a>
                 </li>
               ))}

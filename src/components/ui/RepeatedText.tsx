@@ -27,7 +27,7 @@ const RepeatedText = () => {
         stagger: 0.2,
         scrollTrigger: {
           trigger: ".animated-text",
-          start: "top 80%",
+          start: "top 95%",
           toggleActions: "restart none none none",
         },
       }

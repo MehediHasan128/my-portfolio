@@ -1,6 +1,32 @@
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import html5 from '../../../assets/icons/html5.png';
+import css3 from '../../../assets/icons/css3.png';
+import js from '../../../assets/icons/js.png';
+import react from '../../../assets/icons/react.png';
+import redux from '../../../assets/icons/redux.png';
+import ts from '../../../assets/icons/typescript.png';
+import node from '../../../assets/icons/node.png';
+import express from '../../../assets/icons/express.png';
+import mongo from '../../../assets/icons/mongodb.png';
+import tailwind from '../../../assets/icons/tailwind.png';
+import mongoose from '../../../assets/icons/mongoose.png';
+import SkillProgressBar from "../../ui/SkillProgressBar";
+
+const skills = [
+  { skill: "HTML", percentage: 95, icon: html5 },
+  { skill: "CSS3", percentage: 80, icon: css3 },
+  { skill: "JavaScript", percentage: 50, icon: js },
+  { skill: "React", percentage: 75, icon: react },
+  { skill: "Redux", percentage: 50, icon: redux },
+  { skill: "TypeScript", percentage: 65, icon: ts },
+  { skill: "TailwindCSS", percentage: 80, icon: tailwind },
+  { skill: "Node.js", percentage: 55, icon: node },
+  { skill: "Express.js", percentage: 50, icon: express },
+  { skill: "mongoDB", percentage: 75, icon: mongo },
+  { skill: "mongoose", percentage: 70, icon: mongoose },
+];
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -51,6 +77,16 @@ const Skill = () => {
         >
           About Me
         </h1>
+      </div>
+
+      <div className="w-[80%] mx-auto mt-10 text-white">
+        <div className="grid grid-cols-1 xl:grid-cols-3 w-full gap-x-24 gap-y-5">
+          {
+            skills.map((skill, i)  => (
+              <SkillProgressBar key={i} skillData={skill} />
+            ))
+          }
+        </div>
       </div>
 
       <div></div>

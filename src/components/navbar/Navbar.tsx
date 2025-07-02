@@ -62,19 +62,19 @@ const Navbar = () => {
 
   return (
     <header id="navbar" className="fixed w-full z-100 overflow-hidden">
-      <nav className="bg-text-primary w-[85%] mx-auto py-4 px-10 rounded-b-2xl">
+      <nav className="bg-text-primary w-[95%] xl:w-[85%] mx-auto py-3 md:py-5 xl:py-4 px-5 xl:px-10 rounded-b-lg md:rounded-b-2xl">
         <div className="flex justify-between items-center">
           {/* Logo section */}
           <div className="flex items-center gap-2.5">
-            <img className="max-w-14" src={logo} alt="logo" />
-            <h1 className="text-logo text-3xl font-extrabold">Mehedi</h1>
+            <img className="w-10 md:w-12 xl:max-w-14" src={logo} alt="logo" />
+            <h1 className="text-logo text-lg md:text-xl 2xl:text-3xl font-extrabold">Mehedi</h1>
           </div>
 
           {/* Main Nav */}
-          <div>
-            <ul className="flex items-center text-base font-semibold">
+          <div className="hidden md:flex">
+            <ul className="flex items-center text-base font-medium xl:font-semibold">
               {navItems.map((item) => (
-                <li className={`nav-item px-5 py-1 rounded-full transition-colors duration-500 ${(activeSection === item.id) && "bg-deepTeal text-white"}`}>
+                <li className={`nav-item px-2 xl:px-5 md: py-0.5 xl:py-1 rounded-full transition-colors duration-500 ${(activeSection === item.id) && "bg-deepTeal text-white"}`}>
                   <a href={`#${item.id}`}>{item.navItem}</a>
                 </li>
               ))}
@@ -83,7 +83,7 @@ const Navbar = () => {
 
           {/* Contact button */}
           <div>
-            <button className="border px-5 py-3 rounded-lg bg-deepTeal text-white border-deepTeal">
+            <button className="border px-3 md:px-5 py-1.5 md:py-2.5 xl:py-2 2xl:py-3 text-sm md:text-base rounded-lg bg-deepTeal text-white border-deepTeal">
               Contact Me
             </button>
           </div>

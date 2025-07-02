@@ -65,27 +65,27 @@ const About = () => {
     <section id="about" className="overflow-hidden">
       <RepeatedText />
 
-      <div className="py-20">
-        <div className="mb-20 flex">
+      <div className="py-10 md:py-16 xl:py-20">
+        <div className="mb-10 md:mb-16 xl:mb-20 flex">
           <h1
             id="sectionTitle"
-            className="text-7xl font-bold px-24 text-deepTeal"
+            className="text-3xl md:text-5xl xl:text-6xl 2xl:text-7xl font-bold px-5 md:px-10 xl:px-16 2xl:px-24 text-deepTeal"
           >
             About Me
           </h1>
-          <div id="border" className="h-1 bg-deepTeal flex-1 mt-20" />
+          <div id="border" className="h-[3px] md:h-1 bg-deepTeal flex-1 mt-10 md:mt-16 xl:mt-20 rounded-l-full" />
         </div>
 
-        <div className="w-[80%] mx-auto">
-          <div className="flex gap-20">
-            <div className="w-[40%]">
+        <div className="w-[95%] 2xl:w-[80%] mx-auto">
+          <div className="flex flex-col xl:flex-row gap-10 xl:gap-20">
+            <div className="xl:w-[40%]">
               <img className="rounded-2xl" src={myImg} alt="" />
             </div>
-            <div className="w-[50%]">
+            <div className="xl:w-[50%]">
               <h1 id="aboutTitle" className="text-5xl md:text-7xl font-bold">
                 So, who am I?
               </h1>
-              <p className="my-10 xl:my-16 2xl:my-20 md:text-xl xl:text-lg text-justify text-gray-600 font-medium">
+              <p className="my-10 xl:my-16 2xl:my-20 md:text-xl xl:text-lg text-justify text-gray-700 font-semibold">
                 I’m Mehedi Hasan Baized, a passionate and self-driven MERN Stack
                 Developer with a strong interest in building modern, responsive,
                 and user-focused web applications. I specialize in both frontend
@@ -108,11 +108,11 @@ const About = () => {
               </div>
 
               <div className="flex gap-5">
-                <button className="border px-5 py-3 rounded-lg bg-deepTeal text-white border-deepTeal flex items-center gap-3 font-semibold">
+                <button className="border px-5 py-2 xl:py-3 rounded-lg bg-deepTeal text-white border-deepTeal flex items-center gap-3 font-semibold">
                   <LuDownload className="text-xl" />
                   Resume
                 </button>
-                <button className="border px-5 py-3 rounded-lg border-deepTeal flex items-center gap-3 font-semibold">
+                <button className="border px-5 py-2 xl:py-3 rounded-lg border-deepTeal flex items-center gap-3 font-semibold">
                   <AiFillGithub className="text-xl" />
                   GitHub
                 </button>

@@ -1,5 +1,6 @@
 import About from "./about/About";
 import Banner from "./banner/Banner";
+import Project from "./project/Project";
 import Skill from "./skill/Skill";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
       <Banner />
       <About />
       <Skill />
+      <Project />
     </main>
   );
 };

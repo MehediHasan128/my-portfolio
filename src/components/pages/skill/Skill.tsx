@@ -75,7 +75,7 @@ const Skill = () => {
           id="skillSectionTitle"
           className="text-3xl md:text-5xl xl:text-6xl 2xl:text-7xl font-bold px-5 md:px-10 xl:px-16 2xl:px-24 text-text-primary"
         >
-          About Me
+          My Skills
         </h1>
       </div>
 

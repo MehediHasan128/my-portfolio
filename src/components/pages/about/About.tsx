@@ -33,27 +33,27 @@ gsap.registerPlugin(ScrollTrigger);
 const About = () => {
   useGSAP(() => {
     gsap.fromTo(
-      "#border",
+      "#aboutBorder",
       { x: 1500 },
       {
         x: 0,
         duration: 1.5,
         scrollTrigger: {
-          trigger: "#border",
+          trigger: "#aboutBorder",
           start: "top 95%",
           toggleActions: "restart none none none",
         },
       }
     );
     gsap.fromTo(
-      "#sectionTitle",
+      "#aboutTitle",
       { y: 100, opacity: 0 },
       {
         y: 0,
         opacity: 1,
         duration: 1,
         scrollTrigger: {
-          trigger: "#sectionTitle",
+          trigger: "#aboutTitle",
           start: "top 100%",
           toggleActions: "restart none none none",
         },
@@ -68,12 +68,12 @@ const About = () => {
       <div className="py-10 md:py-16 xl:py-20">
         <div className="mb-10 md:mb-16 xl:mb-20 flex">
           <h1
-            id="sectionTitle"
+            id="aboutTitle"
             className="text-3xl md:text-5xl xl:text-6xl 2xl:text-7xl font-bold px-5 md:px-10 xl:px-16 2xl:px-24 text-deepTeal"
           >
             About Me
           </h1>
-          <div id="border" className="h-[3px] md:h-1 bg-deepTeal flex-1 mt-10 md:mt-16 xl:mt-20 rounded-l-full" />
+          <div id="aboutBorder" className="h-[3px] md:h-1 bg-deepTeal flex-1 mt-10 md:mt-16 xl:mt-20 rounded-l-full" />
         </div>
 
         <div className="w-[95%] 2xl:w-[80%] mx-auto">
@@ -82,7 +82,7 @@ const About = () => {
               <img className="rounded-2xl" src={myImg} alt="" />
             </div>
             <div className="xl:w-[50%]">
-              <h1 id="aboutTitle" className="text-5xl md:text-7xl font-bold">
+              <h1 className="text-5xl md:text-7xl font-bold">
                 So, who am I?
               </h1>
               <p className="my-10 xl:my-16 2xl:my-20 md:text-xl xl:text-lg text-justify text-gray-700 font-semibold">

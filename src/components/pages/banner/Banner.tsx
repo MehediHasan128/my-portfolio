@@ -53,8 +53,8 @@ const Banner = () => {
         </div>
 
         {/* Main Content */}
-        <div className="absolute w-full text-center top-1/2 md:top-[40%] xl:top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-text-primary uppercase">
-          <h1 id="bannerContent" className="text-7xl md:text-[160px] xl:text-[240px] 2xl:text-[300px] font-bold">
+        <div className="absolute w-full text-center top-[40%] xl:top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-text-primary uppercase">
+          <h1 id="bannerContent" className="text-[124px] md:text-[160px] xl:text-[240px] 2xl:text-[300px] font-extrabold md:font-bold leading-28 md:leading-0">
             mehedi portfolio
           </h1>
         </div>

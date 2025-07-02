@@ -57,12 +57,12 @@ const Navbar = () => {
 
   useGSAP(() => {
     gsap.fromTo("#navbar", {y: -200, opacity: 0}, {y: 0, opacity: "100%", duration: 1.5,});
-    gsap.fromTo(".nav-item", {y: 100, opacity: 0}, {y: 0, opacity: "100%",delay: 0.5, duration: 1.5, stagger: 0.2});
+    gsap.fromTo(".nav-item", {y: 100, opacity: 0}, {y: 0, opacity: "100%",delay: 0.5, duration: 0.5, stagger: 0.2});
   }, []);
 
   return (
     <header id="navbar" className="fixed w-full z-100 overflow-hidden">
-      <nav className="bg-text-primary w-[95%] xl:w-[85%] mx-auto py-3 md:py-5 xl:py-4 px-5 xl:px-10 rounded-b-lg md:rounded-b-2xl">
+      <nav className="bg-text-primary md:w-[95%] xl:w-[85%] mx-auto py-3 md:py-5 xl:py-4 px-5 xl:px-10 md:rounded-b-2xl">
         <div className="flex justify-between items-center">
           {/* Logo section */}
           <div className="flex items-center gap-2.5">

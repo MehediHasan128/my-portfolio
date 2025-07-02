@@ -23,7 +23,7 @@ const SkillProgressBar = ({
   skillData: TSkillProgressBarProp;
 }) => {
   const [displayed, setDisplayed] = useState(0);
-  const { ref, inView } = useInView({ threshold: 0.4 });
+  const { ref, inView } = useInView({ threshold: 0.5 });
   const barControls = useAnimation();
 
   const count = useMotionValue(0);

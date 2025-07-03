@@ -34,7 +34,7 @@ const Project = () => {
   }, []);
 
   return (
-    <div id="projects" className="overflow-hidden">
+    <section id="projects" className="overflow-hidden">
       <div className="py-10 md:py-16 xl:py-20">
         <div className="mb-10 md:mb-16 xl:mb-20 flex">
           <h1
@@ -49,7 +49,7 @@ const Project = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

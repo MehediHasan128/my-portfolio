@@ -160,7 +160,7 @@ const Qualification = () => {
 
   return (
     <section
-      id="skills"
+      id="qualifications"
       className="overflow-hidden bg-bg-secondary py-10 xl:py-20"
     >
       <div className="mb-10 md:mb-16 xl:mb-20 flex">

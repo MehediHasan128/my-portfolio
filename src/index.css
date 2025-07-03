@@ -37,3 +37,14 @@ html {
 #bannerContent{
   font-family: "League Gothic", sans-serif;
 }
+
+
+
+
+
+
+@layer utilities {
+  .input-style {
+    @apply bg-gray-300 px-5 py-2.5 rounded-lg font-medium focus:outline-0 border border-gray-300 focus:border-blue-700 duration-700 mt-1
+  }
+}

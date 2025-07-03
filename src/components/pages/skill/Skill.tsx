@@ -88,8 +88,7 @@ const Skill = () => {
           }
         </div>
       </div>
-
-      <div></div>
+      
     </section>
   );
 };
